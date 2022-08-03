@@ -18,10 +18,7 @@ const prod4 = new producto("Auricular HyperX Cloud Stinger", 8000, 65)
 // const cuota6 = new cuota(1.6)
 // const cuota12 = new cuota(2.2)
 
-let uno = 1
-let tres = 1.3
-let seis = 1.6
-let doce = 2.2
+
 
 
 
