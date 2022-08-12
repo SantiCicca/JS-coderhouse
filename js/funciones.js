@@ -1,13 +1,12 @@
 // Simulador Interactivo
 
-function productos() {
+function productos() { 
+
     let producto = prompt("Eliga uno de los siguientes productos a comprar: (teclado, mouse, monitor, auricular)")
-    console.log("Seleccionaste para comprar un", producto)
     let cuota = parseInt(prompt("Eliga la cantidad de cuotas: 1, 3, 6 o 12"))
     console.log("Seleccionaste", cuota, "cuotas")
 
     console.log("Precio a pagar=", realizarCuota(producto, cuota))
-
 }
 
 function realizarCuota(producto, cuota) {
@@ -24,7 +23,6 @@ function realizarCuota(producto, cuota) {
 
         default: return "Por favor, seleccione entre las opciones (teclado, mouse, monitor o auricular)"
     }
-
 }
 
 // Funciones de Array "Perifericos"
@@ -37,14 +35,24 @@ function listarPerifericos() {
 
 function agregarPeriferico() {
     let nuevoPeriferico = prompt("Ingresa el nuevo Periferico a agregar:")
+    let resultado = perifericos.includes(nuevoPeriferico)
+    if (resultado === false) {
         perifericos.push(nuevoPeriferico)
+    } else {
+        console.error("El periferico", nuevoPeriferico, "ya esta incluido en la lista")
+    }
+        
 }
 
 function quitarPeriferico() {
-
-    let aQuitar = prompt("Eliga el ID del periferico a quitar:")
-    let resultado = perifericos.splice(aQuitar, 1)
-    console.warn("Se ha eliminado", resultado, "de la lista de perifericos")
+    let aQuitar = prompt("Eliga el nombre del periferico a quitar:")
+    let indice = perifericos.indexOf(aQuitar)
+    if (indice !== -1) {
+        let resultado = perifericos.splice(indice, 1)
+        console.warn("Se ha eliminado", resultado, "de la lista de perifericos")
+    } else {
+        console.error("No se ha encontrado el periferico", aQuitar)
+    }
 }
 
 
