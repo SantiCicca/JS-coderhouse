@@ -11,6 +11,7 @@ class Producto {
 }
 
 function generarProductos() {
+  const productos = []
   productos.push(new Producto(creoID(), "Mouse Logitech Pro Series Pro X Superlight", 19.399)
   );
   productos.push(new Producto(creoID(), "Mouse Razer Viper Mini", 7.199));
