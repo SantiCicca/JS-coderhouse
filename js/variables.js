@@ -1,1 +1,1 @@
-const productos = [];
+const productos = []
