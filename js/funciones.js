@@ -11,7 +11,7 @@ class Producto {
     this.importe = importe;
   }
 }
-
+dsadsadsa
 function produ() {
   productos.push(new productos(id, nombre, importe));
 }
