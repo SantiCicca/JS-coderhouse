@@ -1,5 +1,3 @@
-const productos = [];
-
 function creoID() {
   return parseInt(Math.random() * 100000);
 }
@@ -11,14 +9,14 @@ class Producto {
     this.importe = importe;
   }
 }
-
+produ()
 function produ() {
-  productos.push(new productos(id, nombre, importe));
+  productos.push(new Producto(creoID(), "conchita", 2));
+  console.table(productos)
 }
-
+generarProductos()
 function generarProductos() {
-  productos.push(
-    new Producto(creoID(), "Mouse Logitech Pro Series Pro X Superlight", 19.399)
+  productos.push(new Producto(creoID(), "Mouse Logitech Pro Series Pro X Superlight", 19.399)
   );
   productos.push(new Producto(creoID(), "Mouse Razer Viper Mini", 7.199));
   productos.push(
@@ -66,25 +64,21 @@ function generarProductos() {
       4.998
     )
   );
+    console.table(productos)
+    }
+    buscarProducto()
+  function buscarProducto() {
+    let prod = prompt("ingrese el producto que busca:");
+    const resultado = productos.filter((elemento) =>
+      elemento.nombre.includes(prod)
+    );
+    console.table(resultado);
+  }
 
-  console.table(productos);
-}
-
-function buscarProducto() {
-  let prod = prompt("ingrese el producto que busca:");
-  const resultado = productos.filter((elemento) =>
-    elemento.nombre.includes(prod)
-  );
-  console.table(resultado);
-}
-
-function calcularProductos() {
-  let total = productos.reduce(
-    (acumulador, producto) => acumulador + producto.importe,
-    0
-  );
-  console.log("total valor de prodctos $:", total);
-}
-
-
-
+  function calcularProductos() {
+    let total = productos.reduce(
+      (acumulador, producto) => acumulador + producto.importe,
+      0
+    );
+    console.log("total valor de productos $:", total);
+    }
