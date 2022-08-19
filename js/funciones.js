@@ -11,7 +11,6 @@ class Producto {
 }
 
 function generarProductos() {
-  const productos = []
   productos.push(new Producto(creoID(), "Mouse Logitech Pro Series Pro X Superlight", 19.399)
   );
   productos.push(new Producto(creoID(), "Mouse Razer Viper Mini", 7.199));
@@ -42,7 +41,7 @@ function generarProductos() {
   productos.push(
     new Producto(
       creoID(),
-      "pad Logitech Desk Mat Studio Series 300x700 Colores Xl",
+      "Pad Logitech Desk Mat Studio Series 300x700 Colores Xl",
       3.999
     )
   );
@@ -77,6 +76,4 @@ function generarProductos() {
       0
     );
     console.log("total valor de productos $:", total);
-    }
-
-generarProductos()
+  }
