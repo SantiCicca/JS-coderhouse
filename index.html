@@ -5,46 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos - CoderHouse</title>
+    <title>2da pre-entrega -- CoderHouse -- Ciccarelli</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script defer src="js/funciones.js"></script>
     <script defer src="js/variables.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/eventos.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Eventos - CoderHouse</h1>
-        <h2>Santiago Ciccarelli</h2>
+
+        <h1>Ecommerce - Santiago Ciccarelli</h1>
+
     </header>
 
     <main>
 
-        <section id="seccion1">
-            <article class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <p class="card-text">Presione el boton de abajo para generar los productos.</p>
-                    <a href="#" class="btn btn-primary" onclick="generarProductos()">Generar Productos</a>
-                </div>
-            </article>
+        <section id="sectionItems">
+            <div class="sectionitems__item">
+                <button class="listarBtn">Listar Productos</button>
+            </div>
+            <div class="sectionitems__item">
+                <button class="buscarBtn"></button>
+            </div>
+        </section>
 
-            <article class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <p class="card-text">Presione el boton de abajo para buscar un producto.</p>
-                    <a href="#" class="btn btn-primary" onclick="buscarProducto()">Buscar Producto</a>
-                </div>
-            </article>
+        <section>
+            <h2>Productos</h2>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+            <article id="articuloPd"></article>
+        </section>
 
-            <article class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <p class="card-text">Presione el boton de abajo para calcular sus productos</p>
-                    <a href="#" class="btn btn-primary" onclick="calcularProductos()">Calcular Productos</a>
-                </div>
-            </article>
+        <section>
+            <h2>carrito de compras</h2>
+
+            <div id="carritoContainer"></div>
         </section>
 
     </main>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
